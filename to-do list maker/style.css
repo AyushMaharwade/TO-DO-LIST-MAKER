@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Open+Sans:wght@500;600;700&family=Roboto:wght@400;700&family=Rubik:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background:linear-gradient(45deg,#bee9e8, #62b6cb,rgb(67, 67, 128),rgb(129, 59, 205));
+    background-position: left;
+    animation: move 2s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 150%;
+}
+
+@keyframes move{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+.frame{
+        height: 70vh;
+        width: 44vw;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.frame h1{
+    padding: 25px 45px;
+    color: rgb(3, 3, 54);
+    font-size: xxx-large;
+}
+
+.content{
+    /* border: 2px solid red; */
+    height: 308px;
+    margin: 0 50px;
+    overflow: scroll;
+    overflow-x: hidden;
+    position: relative;
+}
+
+ul li{
+    list-style-type: none;
+    padding: 12px 0px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+ul button{
+    border: none;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    height: 35px;
+    width: 35px;
+    background-color: #0d0d33;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    font-size: large;
+    cursor: pointer;
+}
+
+ul button:hover{
+    background-color: #2e2e82;
+}
+
+ul li::before{
+    content:'';
+    display: inline-flex;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+input{
+    text-align: left;
+    margin: 10px 40px;
+    height: 45px;
+    width: 75%;
+    background-color: #ddd8d8;
+    border: none;
+    border-radius: 20px;
+    padding: 0 40px;
+    font-size: 14px;
+    margin-right: 10px;
+
+}
+
+.frame #btn{
+    height: 40px;
+    width: 70px;
+    border: none;
+    background: #0d0d33;
+    color: white;
+    font-size: larger;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.frame #btn:hover{
+    background-color: #2e2e82;
+}
+
+.check{
+    text-decoration:line-through;
+    color: rgb(106, 104, 104);
+}
+
+.check::before{
+    content: '';
+    display: inline-flex;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background-image: url(checked.png);
+    background-position: center;
+    background-size: cover;
+}
